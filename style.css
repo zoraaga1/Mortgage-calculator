@@ -58,6 +58,7 @@ body {
             background-color: hsl(202, 86%, 94%);
             color: hsl(200, 24%, 40%);
             font-weight: bold;
+            border-radius: 0px 5px 5px 0px;
           }
           input {
             box-sizing: border-box;
@@ -65,6 +66,11 @@ body {
             height: 100%;
             border: none;
             outline: none;
+          }
+        }
+        #group1 {
+          p {
+            border-radius: 5px 0px 0px 5px;
           }
         }
         #group2 {

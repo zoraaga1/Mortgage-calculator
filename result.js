@@ -49,7 +49,7 @@ document.querySelector(".calculate-btn").addEventListener("click", function () {
         // Create a new <p> element for total amount paid
         totalPaidElement = document.createElement("p");
         totalPaidElement.classList.add("total-paid");
-        calculatorDiv.appendChild(totalPaidElement); // Append to calculator div
+        calculatorDiv.appendChild(totalPaidElement);
     }
 
     // Update the text content of the new <p> element
