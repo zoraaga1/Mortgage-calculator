@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  height: 99vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(202, 86%, 94%);
+
+  .main {
+    border-radius: 20px 20px 20px 20px;
+    box-sizing: border-box;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+
+    .results {
+      padding: 30px;
+      box-sizing: border-box;
+      height: 100%;
+      background-color: hsl(0, 0%, 100%);
+      width: 30vw;
+      border-radius: 20px 15px 55px 20px;
+      color: hsl(202, 55%, 16%);
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+          border: none;
+          background: none;
+          color: hsl(200, 26%, 54%);
+          text-decoration: underline;
+          font-weight: 500;
+        }
+      }
+
+      .input-section {
+        position: relative;
+        box-sizing: border-box;
+        .input-group {
+          h5 {
+            margin: 20px 0px 5px 0px;
+            color: hsl(200, 26%, 54%);
+            font-weight: lighter;
+          }
+          p {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 10px;
+            background-color: hsl(202, 86%, 94%);
+            color: hsl(200, 24%, 40%);
+            font-weight: bold;
+          }
+          input {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+          }
+        }
+        #group2 {
+          width: 45%;
+          float: left;
+        }
+        #group3 {
+          width: 45%;
+          float: right;
+        }
+
+        .input-box {
+          padding: 5px 0px;
+          display: flex;
+          align-items: center;
+          justify-content: stretch;
+          height: 30px;
+          border: solid 2px hsl(200, 26%, 54%);
+          border-radius: 5px;
+        }
+      }
+      .radios {
+        clear: both;
+        h5 {
+          margin: 100px 0px 5px 0px;
+          color: hsl(200, 26%, 54%);
+          font-weight: lighter;
+        }
+        .radio {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 5px;
+          font-weight: bold;
+          color: hsl(202, 55%, 16%);
+          margin-bottom: 10px;
+          height: 30px;
+          border: solid 2px hsl(200, 26%, 54%);
+          border-radius: 5px;
+        }
+        input[type="radio"] {
+          accent-color: hsl(61, 70%, 52%);
+          height: 18px;
+          width: 18px;
+          margin: 0 10px;
+        }
+        .radio:has(input[type="radio"]:checked) {
+          background-color: hsl(60, 51%, 84%, 0.3);
+          border-color: hsl(61, 70%, 52%);
+        }
+      }
+      .calculate-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: hsl(61, 70%, 52%);
+        border-radius: 50px;
+        width: 70%;
+        border: none;
+        margin-top: 7%;
+      }
+    }
+  }
+
+  .calculator {
+    color: white;
+    height: 100%;
+    background-color: hsl(202, 55%, 16%);
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 20px 20px 55px;
+
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      padding: 15px;
+      text-align: center;
+      margin: 0;
+      color: hsl(200, 26%, 54%);
+    }
+  }
+
+  @media screen and (max-width: 780px){
+    
+    height: 100%;
+    .main {
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+
+      .results {
+        width: 100%;
+        border-radius: 0;
+
+        .title {
+          #clear-btn {
+            padding: 0;
+          }
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        .input-section {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          #group2 {
+            width: 100%;
+            float: left;
+          }
+          #group3 {
+            width: 100%;
+            float: right;
+          }
+        }
+        .radios {
+          h5 {
+            margin: 20px 0px 5px 0px;
+
+          }
+        }
+        .calculate-btn {
+          justify-self: center;
+          width: 100%;
+        }
+      }
+      .calculator {
+        width: 100%;
+        border-radius: 0;
+        p {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
