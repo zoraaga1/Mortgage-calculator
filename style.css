@@ -66,6 +66,11 @@ body {
             height: 100%;
             border: none;
             outline: none;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
           }
         }
         #group1 {
@@ -161,8 +166,7 @@ body {
     }
   }
 
-  @media screen and (max-width: 780px){
-    
+  @media screen and (max-width: 780px) {
     height: 100%;
     .main {
       flex-direction: column;
@@ -197,7 +201,6 @@ body {
         .radios {
           h5 {
             margin: 20px 0px 5px 0px;
-
           }
         }
         .calculate-btn {

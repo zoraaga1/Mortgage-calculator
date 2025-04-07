@@ -7,7 +7,6 @@ document.querySelector(".calculate-btn").addEventListener("click", function () {
     // Check input values
     if (isNaN(MortgageAmount) || isNaN(MortgageTerm) || isNaN(InterestRate) || MortgageAmount <= 0 || MortgageTerm <= 0 || InterestRate <= 0) {
         alert("Please enter valid numbers for all fields.");
-        return;
     }
 
     // Convert interest rate to monthly rate
